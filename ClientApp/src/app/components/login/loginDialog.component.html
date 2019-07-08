@@ -1,0 +1,26 @@
+<app-dialog-header [dialogTitle]="dialogTitle"></app-dialog-header>
+<form [formGroup]="loginForm" (ngSubmit)="dialogRef.close(loginForm.value)" novalidate>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <input matInput
+                   name="username"
+                   placeholder="Username"
+                   formControlName="name"
+                   autocomplete="off" />
+            <mat-error *ngIf="formErrors.name" class="form__error">{{ formErrors.name }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput
+                   name="password"
+                   placeholder="Enter your password"
+                   formControlName="password"
+                   [type]="hide ? 'password' : 'text'" />
+            <mat-error *ngIf="formErrors.password" class="form__error">{{ formErrors.password }}</mat-error>
+            <mat-icon matSuffix color="accent" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+    </div>
+    <app-dialog-footer (clickSubmit)="validateUser()"
+                       [disabled]="!loginForm.valid"
+                       [submitButtonName]="submitButtonName">
+    </app-dialog-footer>
+</form>

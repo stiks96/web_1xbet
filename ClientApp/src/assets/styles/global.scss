@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+.logger-success {
+  color: $success !important;
+}
+
+.logger-warn {
+  color: $warning !important;
+}
+
+.logger-error {
+  color: $danger !important;
+}

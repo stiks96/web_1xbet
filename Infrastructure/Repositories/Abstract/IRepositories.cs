@@ -3,7 +3,10 @@
 namespace Web1xbet.Infrastructure.Repositories
 {
     public interface IBetRepository : IEntityBaseRepository<Bet> { }
-    public interface IUserRepository : IEntityBaseRepository<User> { }
+    public interface IUserRepository : IEntityBaseRepository<User> 
+    {
+        User GetUser(string username, string password);
+    }
     public interface IEventRepository : IEntityBaseRepository<Event> { }
     public interface IEventTypeRepository : IEntityBaseRepository<EventType> { }
     public interface IStatusTypeRepository : IEntityBaseRepository<StatusType> { }

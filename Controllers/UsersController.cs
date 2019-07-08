@@ -18,10 +18,10 @@ namespace Web1xbet.Controllers
         }
 
         [HttpGet("[action]")]
-        public User GetUser()
+        public User GetUser([FromQuery(Name = "username")] string username,
+            [FromQuery(Name = "password")] string password)
         {
-            var result = usersRepository.GetSingle(1);
-            return result;
+            return usersRepository.GetUser(username, password);
         }
 
         [HttpGet("[action]")]

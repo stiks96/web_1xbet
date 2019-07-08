@@ -1,0 +1,18 @@
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+    <button *ngIf="submitButtonName"
+            mat-raised-button
+            appNoDblClickMat
+            color="accent"
+            [disabled]="disabled"
+            type="button"
+            (click)="submit()">
+        {{submitButtonName}}
+    </button>
+    <button mat-raised-button
+            color="accent"
+            type="button"
+            (click)="dialogRef.close(false)">
+        Cancel
+    </button>
+</mat-dialog-actions>

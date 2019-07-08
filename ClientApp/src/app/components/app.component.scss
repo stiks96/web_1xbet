@@ -1,7 +1,7 @@
-@import '../../assets/styles/variables.less';
+@import '../../assets/styles/variables.scss';
 
-.body-content {
-    background-image: @backgroundImage;
+.row {
+    background-image: $backgroundImage;
     overflow: auto;
 }
 

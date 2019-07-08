@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/styles/spinner.less",
-              "src/assets/styles/global.less",
-              "src/assets/styles/scroll.less",
+              "src/assets/styles/styles.css",
+              "src/assets/styles/spinner.scss",
+              "src/assets/styles/theme.scss",
+              "src/assets/styles/variables.scss",
+              "src/assets/styles/global.scss",
+              "src/assets/styles/scroll.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
@@ -78,7 +81,12 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.less",
+              "src/assets/styles/styles.css",
+              "src/assets/styles/spinner.scss",
+              "src/assets/styles/theme.scss",
+              "src/assets/styles/variables.scss",
+              "src/assets/styles/global.scss",
+              "src/assets/styles/scroll.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "assets": [
@@ -130,7 +138,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "less"
+      "styleext": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
