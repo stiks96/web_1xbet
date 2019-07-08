@@ -1,0 +1,26 @@
+@import '../../assets/styles/variables.less';
+
+.body-content {
+    background-image: @backgroundImage;
+    overflow: auto;
+}
+
+@media (max-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    .body-content {
+        padding-top: 50px;
+    }
+
+    .col-sm-2 {
+        height: 0% !important;
+    }
+
+    //TODO: change
+    ::-webkit-scrollbar-track {
+        margin-top: 50px;
+    }
+}
+
+.container-fluid, .row, .col-sm-2, .body-content{
+    height: 100%;
+}
