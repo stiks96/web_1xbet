@@ -8,5 +8,6 @@ namespace Web1xbet.Entities
         public string Password { get; set; }
         public double Balance { get; set; }
         public StatusType Status { get; set; }
+        public int? StatusId { get; set; } = null;
     }
 }

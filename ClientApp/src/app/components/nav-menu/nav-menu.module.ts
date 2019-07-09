@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { NavMenuComponent } from './nav-menu.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { UserService } from '../../services/user.service';
+import { MaterialModule } from '../../shared/material.module';
 
 @NgModule({
     declarations: [
@@ -10,7 +10,8 @@ import { UserService } from '../../services/user.service';
     ],
     imports: [
         RouterModule,
-        CommonModule
+        CommonModule,
+        MaterialModule
     ],
     providers: [],
     exports: [NavMenuComponent],

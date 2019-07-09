@@ -10,7 +10,8 @@ export class NavMenuComponent {
 
     public isExpanded = false;
 
-    public constructor(private readonly userService: UserService) {}
+    public constructor(private readonly userService: UserService) {
+    }
 
     public collapse(): void {
         this.isExpanded = false;
@@ -22,5 +23,10 @@ export class NavMenuComponent {
 
     public get username(): string {
         return this.userService.userName;
+    }
+
+    public logout(): void {
+        this.userService.logout();
+        location.reload();
     }
 }

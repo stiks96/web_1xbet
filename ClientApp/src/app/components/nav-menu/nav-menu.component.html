@@ -33,8 +33,9 @@
                     </a>
                 </li>
             </ul>
-            <div class="about-text" *ngIf="!isExpanded">
+            <div class="about-text" *ngIf="!isExpanded && username">
                 <span>Welcome, {{username}}</span>
+                <button mat-raised-button color="primary" (click)="logout()">Log out</button>
             </div>
         </div>
     </div>
